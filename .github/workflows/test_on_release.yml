@@ -4,10 +4,7 @@ on:
   schedule:
     - cron: "30 21 * * 6"  # Every Saturday 9:30 pm UTC
   push:
-    branches:
-      - "*release*" # Run on release-* format
-      - "release/*" # Run on release/1.2.3 branch format
-      - "feat/environments"
+    branches: [develop, staging, main]
   workflow_dispatch: # Allows manual triggering
     inputs:
       branch:
